@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Factory - Handcrafted Candies & Treats</title>
+  <!-- Google Fonts for playful typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+   <!-- 1. Top Announcement Bar -->
+  <div class="promo-bar">
+    🎉 Free shipping on all candy orders over $35! Use code: <strong>SWEET35</strong>
+  </div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">🍬 SweetFactory</div>
+    <nav>
+
+     <ul class="nav-links">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#products">Our Sweets</a></li>
+  <li><a href="#custom-box">Mix Box</a></li>
+  <li><a href="#reviews">Reviews</a></li>
+  <!-- Cart Badge Item -->
+
+    <li>
+  <a href="#cart" class="cart-link" id="cart-btn">
+    🛒 Cart <span id="cart-count">0</span>
+  </a>
+  </li>
+</ul>
+
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <!-- Floating background icons -->
+    <span class="floating-icon icon-1">🍬</span>
+    <span class="floating-icon icon-2">🍭</span>
+    <span class="floating-icon icon-3">🍫</span>
+    <span class="floating-icon icon-4">🍩</span>
+
+    <div class="hero-content">
+      <span class="badge">Freshly Made Daily</span>
+      <h1>Welcome to the Sweetest Place on Earth!</h1>
+      <p>Handcrafted chocolates, gummy treats, and magical confections made with love.</p>
+      <a href="#products" class="sweet-btn btn-primary">Explore Products</a>
+    </div>
+  </section>
+
+  <!-- Product Showcase Section -->
+  <section id="products" class="products-section">
+    <h2 class="section-title">Our Top Sellers</h2>
+
+    <!-- 2. Category Filters -->
+    <div class="category-filters">
+      <button class="filter-btn active">All Sweets</button>
+      <button class="filter-btn">Gummies 🐻</button>
+      <button class="filter-btn">Chocolates 🍫</button>
+      <button class="filter-btn">Hard Candy 🍭</button>
+      <button class="filter-btn">Gift Boxes 🎁</button>
+    </div>
+    
+    <div class="product-grid">
+      <!-- Product Card 1 -->
+      <div class="sweet-card">
+        <span class="badge badge-pop">Popular</span>
+        <div class="card-icon">🐻</div>
+        <h2>Gummy Bears</h2>
+        <p>Delicious, fruit-flavored chewy candies bursting with juice.</p>
+        <span class="price">$4.99</span>
+      <button class="sweet-btn add-to-cart-btn" data-name="Gummy Bears" data-price="4.99">Add to Cart</button>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="sweet-card">
+        <span class="badge badge-sweet">Best Seller</span>
+        <div class="card-icon">🍭</div>
+        <h2>Rainbow Lollipops</h2>
+        <p>Classic swirl lollipops packed with vibrant fruit flavors.</p>
+        <span class="price">$3.50</span>
+        <button class="sweet-btn add-to-cart-btn" data-name="Rainbow Lollipops" data-price="3.50">
+      Add to Cart
+    </button>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="sweet-card">
+        <span class="badge badge-new">New</span>
+        <div class="card-icon">🍫</div>
+        <h2>Fudge Truffles</h2>
+        <p>Rich, velvety dark chocolate truffles dusted with cocoa.</p>
+        <span class="price">$6.50</span>
+        <button class="sweet-btn add-to-cart-btn" data-name="Fudge Truffles" data-price="6.50">
+      Add to Cart
+    </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Feature Highlights Section -->
+  <section class="features-section">
+    <div class="feature-card">
+      <div class="feature-icon">🌿</div>
+      <h3>100% Organic Ingredients</h3>
+      <p>Made with natural fruit juices and real cane sugar.</p>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-icon">🚀</div>
+      <h3>Express Delivery</h3>
+      <p>Temperature-controlled shipping so nothing melts.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">🎁</div>
+      <h3>Custom Gift Packaging</h3>
+      <p>Include personalized handwritten cards with any order.</p>
+    </div>
+  </section>
+
+  <!-- 4. Interactive Call to Action Section -->
+  <section id="custom-box" class="cta-banner">
+    <div class="cta-content">
+      <h2>Build Your Custom Mix Box! 📦</h2>
+      <p>Pick up to 6 of your favorite treats and build a personalized candy box for any occasion.</p>
+      <a href="#custom-box" class="sweet-btn btn-secondary">Start Mixing Now</a>
+    </div>
+  </section>
+
+  <!-- 5. Testimonials Section -->
+  <section id="reviews" class="testimonials-section">
+    <h2 class="section-title">What Our Sweet Tooth Fans Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"The gummy bears are incredibly fresh and juicy. Best candy store online!"</p>
+        <span class="author">- Sarah M.</span>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Ordered a custom mix for a birthday party. Arrived fast and looked amazing."</p>
+        <span class="author">- David K.</span>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"The fudge truffles melted in my mouth. Will definitely order every month!"</p>
+        <span class="author">- Emily R.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Newsletter Section -->
+  <section class="newsletter-section">
+    <div class="newsletter-content">
+      <h2>Get 15% Off Your First Order 🍬</h2>
+      <p>Subscribe to receive secret discount codes and new product releases.</p>
+      <form class="newsletter-form" onsubmit="event.preventDefault();">
+        <input type="email" placeholder="Enter your email address" required>
+        <button type="submit" class="sweet-btn">Claim Discount</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Sweet Factory. All sweet rights reserved.</p>
+  </footer>
+
+<!-- Cart Drawer Overlay -->
+<div id="cart-overlay" class="cart-overlay"></div>
+
+<!-- Slide-Out Cart Drawer -->
+<div id="cart-drawer" class="cart-drawer">
+  <div class="cart-header">
+    <h2>Your Sweet Cart 🍬</h2>
+    <button id="close-cart-btn" class="close-cart">&times;</button>
+  </div>
+
+  <div id="cart-items-container" class="cart-items-container">
+    <!-- Dynamic cart items will render here via JS -->
+  </div>
+
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span>Total:</span>
+      <span id="cart-total-price">$0.00</span>
+    </div>
+    <button id="clear-cart-btn" class="sweet-btn btn-clear">Clear Cart</button>
+    <button class="sweet-btn btn-checkout">Proceed to Checkout</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="script.js"></script>
+
+
+</body> 
+</html>
