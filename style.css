@@ -1,0 +1,599 @@
+/* Color Palette & Font Variables */
+:root {
+  --candy-pink: #ff6b8b;
+  --candy-pink-hover: #e05270;
+  --candy-yellow: #ffd166;
+  --candy-purple: #9b5de5;
+  --candy-mint: #06d6a0;
+  --bg-soft: #fff5f8;
+  --text-dark: #2b2d42;
+  --font-heading: 'Fredoka', cursive, sans-serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-soft);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Header & Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(255, 107, 139, 0.08);
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--candy-pink);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--candy-pink);
+}
+
+/* Hero Section */
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #fff5f8 0%, #ffe3ec 100%);
+}
+
+.hero-content {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  color: var(--candy-purple);
+  margin: 15px 0;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* Animated Floating Background Elements */
+.hero {
+  position: relative;
+  overflow: hidden; /* Prevents floating elements from causing horizontal scrollbars */
+}
+
+.hero::before,
+.hero::after {
+  position: absolute;
+  font-size: 3rem;
+  opacity: 0.35;
+  pointer-events: none; /* Allows clicks to pass through to buttons/links */
+  animation: float 4s ease-in-out infinite alternate;
+}
+
+/* Left Candy */
+.hero::before {
+  content: '🍬';
+  top: 15%;
+  left: 8%;
+}
+
+/* Right Lollipop */
+.hero::after {
+  content: '🍭';
+  bottom: 15%;
+  right: 8%;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-20px) rotate(12deg);
+  }
+}
+
+
+
+/* Section Styling */
+.products-section {
+  padding: 60px 8%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  text-align: center;
+  color: var(--candy-purple);
+  margin-bottom: 40px;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Sweet Cards */
+.sweet-card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  border: 3px solid var(--candy-pink);
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(255, 107, 139, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sweet-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(255, 107, 139, 0.2);
+}
+
+.card-icon {
+  font-size: 3.5rem;
+  margin: 15px 0 10px;
+}
+
+.sweet-card h2 {
+  font-family: var(--font-heading);
+  color: var(--candy-purple);
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.sweet-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.price {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--candy-pink);
+  margin-bottom: 15px;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  background-color: var(--candy-yellow);
+  color: var(--text-dark);
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 5px 14px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-pop { background-color: var(--candy-yellow); }
+.badge-sweet { background-color: var(--candy-pink); color: #fff; }
+.badge-new { background-color: var(--candy-mint); color: #fff; }
+
+/* Buttons */
+.sweet-btn {
+  background-color: var(--candy-pink);
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.sweet-btn:hover {
+  background-color: var(--candy-pink-hover);
+}
+
+.sweet-btn:active {
+  transform: scale(0.98);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #ffffff;
+  border-top: 1px solid #ffe3ec;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+
+/* 1. Promo Announcement Bar */
+.promo-bar {
+  background-color: var(--candy-purple);
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Floating Animations */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.floating-icon {
+  position: absolute;
+  font-size: 2.5rem;
+  opacity: 0.35;
+  pointer-events: none;
+  animation: float 4s ease-in-out infinite alternate;
+}
+
+.icon-1 { top: 10%; left: 5%; animation-delay: 0s; }
+.icon-2 { top: 60%; left: 8%; animation-delay: 1s; }
+.icon-3 { top: 15%; right: 8%; animation-delay: 2s; }
+.icon-4 { bottom: 15%; right: 12%; animation-delay: 3s; }
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-20px) rotate(12deg); }
+}
+
+/* 2. Category Filters */
+.category-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 35px;
+}
+
+.filter-btn {
+  background-color: #ffffff;
+  border: 2px solid var(--candy-pink);
+  color: var(--text-dark);
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: var(--candy-pink);
+  color: #ffffff;
+}
+
+/* 3. Features Section */
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 50px 8%;
+  background-color: #ffffff;
+  max-width: 1200px;
+  margin: 40px auto;
+  border-radius: 20px;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 20px;
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.feature-card h3 {
+  font-family: var(--font-heading);
+  color: var(--candy-purple);
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* 4. CTA Banner */
+.cta-banner {
+  background: linear-gradient(135deg, var(--candy-pink) 0%, var(--candy-purple) 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 60px 20px;
+  margin: 40px 0;
+  border-radius: 0;
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-banner h2 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.cta-banner p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.btn-secondary {
+  background-color: var(--candy-yellow);
+  color: var(--text-dark);
+}
+
+.btn-secondary:hover {
+  background-color: #f7c244;
+}
+
+/* 5. Testimonials Section */
+.testimonials-section {
+  padding: 60px 8%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.testimonial-card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid #ffe3ec;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.stars {
+  color: var(--candy-yellow);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.author {
+  font-weight: 600;
+  color: var(--candy-purple);
+  display: block;
+}
+
+/* 6. Newsletter Section */
+.newsletter-section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 2px dashed var(--candy-pink);
+}
+
+.newsletter-content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter-section h2 {
+  font-family: var(--font-heading);
+  color: var(--candy-purple);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.newsletter-section p {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  min-width: 240px;
+  padding: 12px 18px;
+  border: 2px solid #e2e8f0;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  outline: none;
+}
+
+.newsletter-form input[type="email"]:focus {
+  border-color: var(--candy-pink);
+}
+
+
+/* Cart Counter Badge */
+.cart-link {
+  position: relative;
+  font-weight: 600;
+}
+
+#cart-count {
+  background-color: var(--candy-pink);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 50px;
+  margin-left: 4px;
+}
+
+
+/* ==========================================
+   RESPONSIVE & MOBILE-FIRST MEDIA QUERIES
+   ========================================== */
+
+/* --- Tablet Screens (Max Width: 768px) --- */
+@media (max-width: 768px) {
+
+  /* 1. Navbar & Header */
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 5%;
+  }
+
+  .nav-links {
+    gap: 15px;
+    font-size: 0.95rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* 2. Hero Section Adjustments */
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem; /* Scaled down heading */
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Hide floating icons on tablets/mobile to avoid cluttering small screens */
+  .floating-icon {
+    display: none;
+  }
+
+  /* 3. Product Grid & Filters */
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+
+  .category-filters {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+  }
+
+  /* 4. Feature Cards Grid */
+  .features-section {
+    grid-template-columns: 1fr;
+    padding: 30px 5%;
+    gap: 15px;
+  }
+
+  /* 5. CTA Banner */
+  .cta-banner {
+    padding: 40px 15px;
+  }
+
+  .cta-banner h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* --- Mobile Phone Screens (Max Width: 480px) --- */
+@media (max-width: 480px) {
+
+  /* Announcement Bar */
+  .promo-bar {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+
+  /* Navigation */
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    gap: 10px 15px;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  /* Product Cards */
+  .product-grid {
+    grid-template-columns: 1fr; /* Single column on phones for easy scrolling */
+  }
+
+  .sweet-card {
+    padding: 20px 15px;
+  }
+
+  /* Newsletter Form */
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .newsletter-form input[type="email"],
+  .newsletter-form .sweet-btn {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+
